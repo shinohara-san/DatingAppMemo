@@ -7,6 +7,5 @@ target 'DatingAppMemo' do
 
   # Pods for DatingAppMemo
 pod 'RealmSwift'
-pod 'Realm'
 pod 'LicensePlist'
 end
