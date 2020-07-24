@@ -1,0 +1,6 @@
+framework module Pods_DatingAppMemo {
+  umbrella header "Pods-DatingAppMemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

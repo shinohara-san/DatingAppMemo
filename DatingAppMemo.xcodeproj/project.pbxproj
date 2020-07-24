@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,18 @@
 		9521DCF824CA6E7F00F57495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9521DCF624CA6E7F00F57495 /* Main.storyboard */; };
 		9521DCFA24CA6E8300F57495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9521DCF924CA6E8300F57495 /* Assets.xcassets */; };
 		9521DCFD24CA6E8300F57495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9521DCFB24CA6E8300F57495 /* LaunchScreen.storyboard */; };
+		9521DD0824CA6EC000F57495 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0724CA6EC000F57495 /* User.swift */; };
+		9521DD0A24CA704D00F57495 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0924CA704D00F57495 /* DataSource.swift */; };
+		9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0C24CA706100F57495 /* AddViewController.swift */; };
+		9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0E24CA706C00F57495 /* DetailViewController.swift */; };
+		9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */; };
+		DCB782D701608B6E2EC64ED7 /* Pods_DatingAppMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.release.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.release.xcconfig"; sourceTree = "<group>"; };
+		9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.debug.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9521DCED24CA6E7F00F57495 /* DatingAppMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatingAppMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9521DCF024CA6E7F00F57495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,11 @@
 		9521DCF924CA6E8300F57495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9521DCFC24CA6E8300F57495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9521DCFE24CA6E8300F57495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9521DD0724CA6EC000F57495 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9521DD0924CA704D00F57495 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		9521DD0C24CA706100F57495 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		9521DD0E24CA706C00F57495 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB782D701608B6E2EC64ED7 /* Pods_DatingAppMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				9521DCEF24CA6E7F00F57495 /* DatingAppMemo */,
 				9521DCEE24CA6E7F00F57495 /* Products */,
+				F322BD6AED58261FC9685BC1 /* Pods */,
+				F15A3AE335A8BF8AFE4F05CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,61 @@
 		9521DCEF24CA6E7F00F57495 /* DatingAppMemo */ = {
 			isa = PBXGroup;
 			children = (
+				9521DD0624CA6EAA00F57495 /* View */,
+				9521DD0524CA6E9800F57495 /* Model */,
+				9521DD0424CA6E8E00F57495 /* Controller */,
 				9521DCF024CA6E7F00F57495 /* AppDelegate.swift */,
 				9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */,
-				9521DCF424CA6E7F00F57495 /* ViewController.swift */,
 				9521DCF624CA6E7F00F57495 /* Main.storyboard */,
 				9521DCF924CA6E8300F57495 /* Assets.xcassets */,
 				9521DCFB24CA6E8300F57495 /* LaunchScreen.storyboard */,
 				9521DCFE24CA6E8300F57495 /* Info.plist */,
 			);
 			path = DatingAppMemo;
+			sourceTree = "<group>";
+		};
+		9521DD0424CA6E8E00F57495 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9521DCF424CA6E7F00F57495 /* ViewController.swift */,
+				9521DD0C24CA706100F57495 /* AddViewController.swift */,
+				9521DD0E24CA706C00F57495 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9521DD0524CA6E9800F57495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9521DD0724CA6EC000F57495 /* User.swift */,
+				9521DD0924CA704D00F57495 /* DataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9521DD0624CA6EAA00F57495 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F15A3AE335A8BF8AFE4F05CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F322BD6AED58261FC9685BC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */,
+				5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9521DD0124CA6E8300F57495 /* Build configuration list for PBXNativeTarget "DatingAppMemo" */;
 			buildPhases = (
+				EB0B5CF9E56B21DB93557BED /* [CP] Check Pods Manifest.lock */,
 				9521DCE924CA6E7F00F57495 /* Sources */,
 				9521DCEA24CA6E7F00F57495 /* Frameworks */,
 				9521DCEB24CA6E7F00F57495 /* Resources */,
+				3B22837F509364DC95715A3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +198,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B22837F509364DC95715A3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB0B5CF9E56B21DB93557BED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DatingAppMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9521DCE924CA6E7F00F57495 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */,
+				9521DD0824CA6EC000F57495 /* User.swift in Sources */,
 				9521DCF524CA6E7F00F57495 /* ViewController.swift in Sources */,
+				9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */,
 				9521DCF124CA6E7F00F57495 /* AppDelegate.swift in Sources */,
+				9521DD0A24CA704D00F57495 /* DataSource.swift in Sources */,
 				9521DCF324CA6E7F00F57495 /* SceneDelegate.swift in Sources */,
+				9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +394,7 @@
 		};
 		9521DD0224CA6E8300F57495 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +413,7 @@
 		};
 		9521DD0324CA6E8300F57495 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
