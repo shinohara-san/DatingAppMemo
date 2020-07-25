@@ -117,10 +117,12 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         let badTopic = badTopicField.text
         let todoOnDate = dateTodoField.text
         
+//        let num = dataSource.count()
+        
         newMatch.id = UUID().uuidString
         newMatch.name = name
         newMatch.matchDay = matchDay
-        newMatch.rank = "第\(dataSource.count() + 1)位"
+        newMatch.rank = "第\(dataSource.getRank())位"
         newMatch.impression = impression ?? ""
         newMatch.goodTopic = goodTopic ?? ""
         newMatch.badTopic = badTopic ?? ""

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
         dataSource = DataSource() ///この1行!!!!
-//        dataSource.printPath()
+        dataSource.printPath()
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,6 +52,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = dataSource.data(at: indexPath.row)?.name
+        cell.detailTextLabel?.text = dataSource.data(at: indexPath.row)?.rank
         return cell
         
     }

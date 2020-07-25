@@ -6,6 +6,11 @@
 //  Copyright © 2020 Yuki Shinohara. All rights reserved.
 //
 
+////配列を順位の順番で昇順にして表示
+////並び替えるときにランクを更新させる
+////UIをシャレおつに
+////アイコンをfigmaで
+
 import Foundation
 import RealmSwift
 
@@ -66,5 +71,13 @@ class DataSource {
         let realm = try! Realm()
         let folderPath = realm.configuration.fileURL!.deletingLastPathComponent().path
         print(folderPath)
+    }
+    
+    func getRank()->Int{
+        let realm = try! Realm()
+        let data = realm.objects(User.self)
+        allPeople = Array(data)
+        
+        return allPeople.count + 1
     }
 }
