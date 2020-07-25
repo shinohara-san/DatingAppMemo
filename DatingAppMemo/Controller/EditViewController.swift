@@ -1,38 +1,29 @@
 //
-//  AddViewController.swift
+//  EditViewController.swift
 //  DatingAppMemo
 //
-//  Created by Yuki Shinohara on 2020/07/24.
+//  Created by Yuki Shinohara on 2020/07/25.
 //  Copyright © 2020 Yuki Shinohara. All rights reserved.
 //
 
 import UIKit
-import RealmSwift
 
-class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
-    @IBOutlet weak var scrollView: UIScrollView!
+class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
+    var user: User!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var matchDayField: UITextField!
     @IBOutlet weak var impressionField: UITextView!
     @IBOutlet weak var goodTopicField: UITextView!
     @IBOutlet weak var badTopicField: UITextView!
     @IBOutlet weak var dateTodoField: UITextView!
-    var dataSource: DataSource!
     
     var datePicker: UIDatePicker = UIDatePicker()
     
-    //    var user: User?
-    let screenSize = UIScreen.main.bounds.size
-    var screenHeight:CGFloat!
-    var screenWidth:CGFloat!
+    var dataSource: DataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        screenWidth = screenSize.width
-        screenHeight = screenSize.height
-        
         nameField.delegate = self
         matchDayField.delegate = self
         impressionField.delegate = self
@@ -40,7 +31,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         badTopicField.delegate = self
         dateTodoField.delegate = self
         
-        dataSource = DataSource() ///この1行!!!!
+        dataSource = DataSource()
         
         datePicker.datePickerMode = .date
         datePicker.timeZone = NSTimeZone.local
@@ -55,6 +46,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         
         matchDayField.inputAccessoryView = toolbar
         
+        nameField.text = user.name
+        matchDayField.text = user.matchDay
+        impressionField.text = user.impression
+        goodTopicField.text = user.goodTopic
+        badTopicField.text = user.badTopic
+        dateTodoField.text = user.todoOnDate
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
     }
@@ -62,11 +60,6 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-   
     
     @objc func done() {
         matchDayField.endEditing(true)
@@ -91,63 +84,41 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        return true
-    }
-
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.emptyFields()
+        return false
     }
     
-
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    @IBAction func editButtonTapped(_ sender: Any) {
         
-        let newMatch = User()
-        guard let name = nameField.text else {return}
-        guard let matchDay = matchDayField.text else {return}
-        
-        if name == "" || matchDay == "" {
-            showNgAlert()
+        guard let name = nameField.text else {
+            return
+        }
+        guard let matchDay = matchDayField.text else {
             return
         }
         
-        let impression = impressionField.text
-        let goodTopic = goodTopicField.text
-        let badTopic = badTopicField.text
-        let todoOnDate = dateTodoField.text
+        if name == "" || matchDay == ""{
+            showNgAlert()
+        }
         
-        newMatch.id = UUID().uuidString
-        newMatch.name = name
-        newMatch.matchDay = matchDay
-        newMatch.rank = "第\(dataSource.count() + 1)位"
-        newMatch.impression = impression ?? ""
-        newMatch.goodTopic = goodTopic ?? ""
-        newMatch.badTopic = badTopic ?? ""
-        newMatch.todoOnDate = todoOnDate ?? ""
+        let updatedUser = User()
+        updatedUser.id = user.id
+        updatedUser.name = name
+        updatedUser.matchDay = matchDay
+        updatedUser.impression = impressionField.text ?? ""
+        updatedUser.goodTopic = goodTopicField.text ?? ""
+        updatedUser.badTopic = badTopicField.text ?? ""
+        updatedUser.todoOnDate = dateTodoField.text ?? ""
         
-        dataSource.saveData(of: newMatch)
-        
+        dataSource.updateData(of: updatedUser)
         showOkAlert()
-    }
-    
-    func emptyFields(){
-        nameField.text = ""
-        matchDayField.text = ""
-        impressionField.text = ""
-        goodTopicField.text = ""
-        badTopicField.text = ""
-        dateTodoField.text = ""
     }
     
     func showOkAlert(){
         let ac = UIAlertController(title: "保存しました", message: "", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "入力を終了する", style: .default, handler: { (_) in
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             self.navigationController?.popViewController(animated: true)
         }))
-        ac.addAction(UIAlertAction(title: "追加で入力する", style: .default, handler: { (_) in
-            self.emptyFields()
-        }))
+        
         present(ac, animated: true)
     }
     
@@ -156,4 +127,5 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(ac, animated: true)
     }
+    
 }

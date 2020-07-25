@@ -39,18 +39,27 @@ class DataSource {
         return nil
     }
     
-    func delete(at index: Int, tableView: UITableView){
+    func delete(user: User){
         let realm = try! Realm()
-        let people = realm.objects(User.self)
-        let person = people[index]
-        guard let index = allPeople.firstIndex(of: person) else { return }
-         
-         try! realm.write({
-             allPeople.remove(at: index)
-             realm.delete(person)
-         })
+        guard let data = realm.objects(User.self).filter("id == '\(user.id)'").first else {return}
+        try! realm.write({
+            realm.delete(data)
+        })
+    }
+    
+    func updateData(of user: User){
+        let realm = try! Realm()
         
-        tableView.reloadData()
+        guard let data = realm.objects(User.self).filter("id == '\(user.id)'").first else {return}
+        
+        try! realm.write {
+            data.name = user.name
+            data.matchDay = user.matchDay
+            data.impression = user.impression
+            data.goodTopic = user.goodTopic
+            data.badTopic = user.badTopic
+            data.todoOnDate = user.todoOnDate
+        }
     }
     
     func printPath(){

@@ -19,6 +19,7 @@ class User: Object {
     @objc dynamic var datingDate: String = ""
     @objc dynamic var datingPlace: String = ""
     @objc dynamic var todoOnDate: String = ""
+    @objc dynamic var rank: String = ""
     
     override static func primaryKey() -> String? {
       return "id"

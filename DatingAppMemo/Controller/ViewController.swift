@@ -18,26 +18,35 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-
+        
         dataSource = DataSource() ///この1行!!!!
 //        dataSource.printPath()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.isEditing = true
+        tableView.allowsSelectionDuringEditing = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dataSource.getData(reload: tableView)
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         dataSource.allPeople = [User]()
     }
-
+    
     @IBAction func barButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "add") as! AddViewController
         navigationController?.pushViewController(vc, animated: true)
     }
     
 }
+
+
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,17 +61,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return dataSource.count()
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            dataSource.delete(at: indexPath.row, tableView: tableView)
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: "detail") as! DetailViewController
         vc.user = dataSource.data(at: indexPath.row)
         navigationController?.pushViewController(vc, animated: true)
         
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        // TODO: 入れ替え時の処理を実装する（データ制御など）
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
     }
     
 }

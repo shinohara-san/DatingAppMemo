@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95214F7824CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */; };
+		95214F7924CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9521DCF124CA6E7F00F57495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF024CA6E7F00F57495 /* AppDelegate.swift */; };
 		9521DCF324CA6E7F00F57495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */; };
 		9521DCF524CA6E7F00F57495 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF424CA6E7F00F57495 /* ViewController.swift */; };
@@ -18,13 +20,29 @@
 		9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0C24CA706100F57495 /* AddViewController.swift */; };
 		9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0E24CA706C00F57495 /* DetailViewController.swift */; };
 		9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */; };
-		DCB782D701608B6E2EC64ED7 /* Pods_DatingAppMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */; };
+		95E15CA024CBC92A008EB256 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E15C9F24CBC92A008EB256 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95214F7A24CA9C2F0010ED01 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				95214F7924CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.release.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.release.xcconfig"; sourceTree = "<group>"; };
 		9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.debug.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		95214F7224CA94AF0010ED01 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DatingAppMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9521DCED24CA6E7F00F57495 /* DatingAppMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatingAppMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9521DCF024CA6E7F00F57495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +56,7 @@
 		9521DD0C24CA706100F57495 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		9521DD0E24CA706C00F57495 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationViewController.swift; sourceTree = "<group>"; };
+		95E15C9F24CBC92A008EB256 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCB782D701608B6E2EC64ED7 /* Pods_DatingAppMemo.framework in Frameworks */,
+				95214F7824CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +111,7 @@
 				9521DCF424CA6E7F00F57495 /* ViewController.swift */,
 				9521DD0C24CA706100F57495 /* AddViewController.swift */,
 				9521DD0E24CA706C00F57495 /* DetailViewController.swift */,
+				95E15C9F24CBC92A008EB256 /* EditViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,6 +136,8 @@
 		F15A3AE335A8BF8AFE4F05CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */,
+				95214F7224CA94AF0010ED01 /* Realm.framework */,
 				027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */,
 			);
 			name = Frameworks;
@@ -142,6 +164,8 @@
 				9521DCEA24CA6E7F00F57495 /* Frameworks */,
 				9521DCEB24CA6E7F00F57495 /* Resources */,
 				3B22837F509364DC95715A3B /* [CP] Embed Pods Frameworks */,
+				95214F7624CA94D70010ED01 /* ShellScript */,
+				95214F7A24CA9C2F0010ED01 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +240,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		95214F7624CA94D70010ED01 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
 		EB0B5CF9E56B21DB93557BED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +295,7 @@
 				9521DD0A24CA704D00F57495 /* DataSource.swift in Sources */,
 				9521DCF324CA6E7F00F57495 /* SceneDelegate.swift in Sources */,
 				9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */,
+				95E15CA024CBC92A008EB256 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
