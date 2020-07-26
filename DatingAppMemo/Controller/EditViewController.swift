@@ -20,10 +20,19 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     var datePicker: UIDatePicker = UIDatePicker()
     
+    @IBOutlet weak var updateButton: UIButton!
     var dataSource: DataSource!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.navigationItem.title = "\(user.name) さん 編集ページ"
+        updateButton.layer.cornerRadius = 10
+        updateButton.layer.shadowColor = UIColor.gray.cgColor
+        updateButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        updateButton.layer.shadowOpacity = 0.3
+        updateButton.layer.shadowRadius = 10
+        
         nameField.delegate = self
         matchDayField.delegate = self
         impressionField.delegate = self

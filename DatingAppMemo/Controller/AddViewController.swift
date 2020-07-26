@@ -27,12 +27,18 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     var screenHeight:CGFloat!
     var screenWidth:CGFloat!
     
+    @IBOutlet weak var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        screenWidth = screenSize.width
-        screenHeight = screenSize.height
+        self.navigationItem.title = "新規マッチユーザー入力"
         
+        saveButton.layer.cornerRadius = 10
+        saveButton.layer.shadowColor = UIColor.gray.cgColor
+        saveButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        saveButton.layer.shadowOpacity = 0.3
+        saveButton.layer.shadowRadius = 10
+
         nameField.delegate = self
         matchDayField.delegate = self
         impressionField.delegate = self

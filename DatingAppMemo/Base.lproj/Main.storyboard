@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--マッチユーザーメモ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatingAppMemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PFz-Jb-SOF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="0oC-RT-UKa" detailTextLabel="IDC-FX-URm" style="IBUITableViewCellStyleValue1" id="pAi-Ta-Ujp">
@@ -46,17 +46,43 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faF-AS-XSb">
+                                <rect key="frame" x="20" y="88" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="お名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obP-09-lwN">
+                                        <rect key="frame" x="0.0" y="0.0" width="287" height="30"/>
+                                        <color key="backgroundColor" red="0.80392156862745101" green="0.70980392156862748" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ランキング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-s1-7Ns">
+                                        <rect key="frame" x="287" y="0.0" width="87" height="30"/>
+                                        <color key="backgroundColor" red="0.80392156862745101" green="0.70980392156862748" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BIl-p6-0h4"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.80392156862745101" green="0.70980392156862748" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PFz-Jb-SOF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8qe-ZE-jk0"/>
+                            <constraint firstItem="PFz-Jb-SOF" firstAttribute="top" secondItem="faF-AS-XSb" secondAttribute="bottom" id="CZp-XT-U5e"/>
                             <constraint firstAttribute="bottom" secondItem="PFz-Jb-SOF" secondAttribute="bottom" id="QHs-KE-ukY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="faF-AS-XSb" secondAttribute="trailing" constant="20" id="WpY-1X-Lu7"/>
+                            <constraint firstItem="faF-AS-XSb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pow-Pt-ypY"/>
                             <constraint firstItem="PFz-Jb-SOF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rC9-fD-o3b"/>
+                            <constraint firstItem="faF-AS-XSb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uDl-L1-4Ea"/>
                             <constraint firstItem="PFz-Jb-SOF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xPh-Ce-5HB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hhf-6y-GMg">
+                    <navigationItem key="navigationItem" title="マッチユーザーメモ" id="Hhf-6y-GMg">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.badge.plus" catalog="system" id="0q3-y4-icQ">
                             <connections>
                                 <action selector="barButtonTapped:" destination="BYZ-38-t0r" id="Uif-iu-s4O"/>
@@ -88,13 +114,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3M4-2n-LZz">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-2C-zRO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-2C-zRO">
                                                         <rect key="frame" x="20" y="20" width="374" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="zmi-Ox-Cgi"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-h3-zOs">
@@ -112,16 +138,16 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチした日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qob-hu-etp">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチした日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qob-hu-etp">
                                                         <rect key="frame" x="20" y="120" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相手の印象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-Tk-fbp">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相手の印象" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-Tk-fbp">
                                                         <rect key="frame" x="20" y="220" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA3-xJ-Mvz">
@@ -133,10 +159,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り上がった話題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-d7-Ftf">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り上がった話題" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-d7-Ftf">
                                                         <rect key="frame" x="20" y="320" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-rj-x5Z">
@@ -148,10 +174,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り下がった話題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow0-P0-PnY">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り下がった話題" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow0-P0-PnY">
                                                         <rect key="frame" x="20" y="709.5" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-yf-96E">
@@ -163,10 +189,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デートTODO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-bh-9xo">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デートTODO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-bh-9xo">
                                                         <rect key="frame" x="20" y="809.5" width="374" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHz-fN-L7G">
@@ -180,20 +206,28 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn3-MD-hr2">
                                                         <rect key="frame" x="20" y="900" width="374" height="30"/>
+                                                        <color key="backgroundColor" red="0.93333333333333335" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="344-vf-y6d"/>
                                                         </constraints>
-                                                        <state key="normal" title="編集"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <state key="normal" title="編集">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="editButtonTapped:" destination="lEg-25-LaV" eventType="touchUpInside" id="SQ1-KT-fY9"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvh-hq-lAe">
                                                         <rect key="frame" x="20" y="950" width="374" height="30"/>
+                                                        <color key="backgroundColor" red="0.93333333333333335" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="TOf-aB-Hu8"/>
                                                         </constraints>
-                                                        <state key="normal" title="削除"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <state key="normal" title="削除">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="deleteButtonTapped:" destination="lEg-25-LaV" eventType="touchUpInside" id="Zg4-ci-slV"/>
                                                         </connections>
@@ -283,6 +317,8 @@
                     <connections>
                         <outlet property="badTopicField" destination="Eaz-yf-96E" id="r1q-uT-mLn"/>
                         <outlet property="dateTodoField" destination="ZHz-fN-L7G" id="ovN-iQ-Fes"/>
+                        <outlet property="deleteButton" destination="Yvh-hq-lAe" id="4uG-PW-b2L"/>
+                        <outlet property="editButton" destination="Zn3-MD-hr2" id="hgV-WT-SBO"/>
                         <outlet property="goodTopicField" destination="VgE-rj-x5Z" id="DuO-h5-wxB"/>
                         <outlet property="impressionField" destination="nA3-xJ-Mvz" id="VDC-J2-Jin"/>
                         <outlet property="matchDayField" destination="r3f-AO-wEQ" id="twx-re-j9Q"/>
@@ -430,25 +466,30 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSB-VB-z96">
-                                                                <rect key="frame" x="0.0" y="1110" width="374" height="304.5"/>
+                                                                <rect key="frame" x="0.0" y="1110" width="374" height="345"/>
                                                                 <string key="text">マッチングアプリ十箇条
-1.  最初は敬語で
-2.  いきなり質問責めにしない
-3.  いきなりLINEなどの連絡先交換を要求しない
-4.  いきなり住所や職場などの個人情報を聞かない
-5.  下ネタや身体の関係をにおわすようなメッセージを送らない
-6.  趣味や興味のあることなど、適度に自分のことを書く
-7.   明るく！さわやかに！
-8.  清潔感は必須！
-9.   (2回目以降)女性の小さな変化に気づき褒める
-10.   3回目で告白する！</string>
+
+一.  最初は敬語で
+二.  いきなり質問責めにしない
+三.  いきなりLINEなどの連絡先交換を要求しない
+四.  いきなり住所や職場などの個人情報を聞かない
+五.  下ネタや身体の関係をにおわすようなメッセージを送らない
+六.  趣味や興味のあることなど、適度に自分のことを書く
+七.   明るく！さわやかに！
+八.  清潔感は必須！
+九.   (2回目以降)女性の小さな変化に気づき褒める
+十.   3回目で告白する！</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-51-5oa">
-                                                                <rect key="frame" x="0.0" y="1434.5" width="374" height="125.5"/>
-                                                                <state key="normal" title="保存"/>
+                                                                <rect key="frame" x="0.0" y="1475" width="374" height="85"/>
+                                                                <color key="backgroundColor" red="0.93333333333333335" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="保存">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="saveButtonTapped:" destination="o8m-Yv-q1R" eventType="touchUpInside" id="SEp-nP-Vcl"/>
                                                                 </connections>
@@ -496,6 +537,7 @@
                         <outlet property="impressionField" destination="RQh-Zd-fcR" id="KWM-J2-gxM"/>
                         <outlet property="matchDayField" destination="kN4-gZ-WCi" id="axE-lD-0KF"/>
                         <outlet property="nameField" destination="ZJl-Td-7Uz" id="6Ud-NF-ce8"/>
+                        <outlet property="saveButton" destination="Oct-51-5oa" id="gxl-b3-6uU"/>
                         <outlet property="scrollView" destination="N1y-Ec-KnJ" id="e9i-9j-vUZ"/>
                     </connections>
                 </viewController>
@@ -658,8 +700,9 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-fb-PM9">
-                                                                <rect key="frame" x="0.0" y="1110" width="374" height="304.5"/>
+                                                                <rect key="frame" x="0.0" y="1110" width="374" height="325"/>
                                                                 <string key="text">マッチングアプリ十箇条
+
 1.  最初は敬語で
 2.  いきなり質問責めにしない
 3.  いきなりLINEなどの連絡先交換を要求しない
@@ -675,8 +718,12 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rd-qE-rf6">
-                                                                <rect key="frame" x="0.0" y="1434.5" width="374" height="125.5"/>
-                                                                <state key="normal" title="更新"/>
+                                                                <rect key="frame" x="0.0" y="1455" width="374" height="105"/>
+                                                                <color key="backgroundColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="更新">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="editButtonTapped:" destination="NRl-Wq-bpi" eventType="touchUpInside" id="H1U-O2-V7R"/>
                                                                 </connections>
@@ -724,6 +771,7 @@
                         <outlet property="impressionField" destination="hRR-AF-LrY" id="RuU-5E-KXs"/>
                         <outlet property="matchDayField" destination="v3p-PW-NXg" id="Zev-0S-ctA"/>
                         <outlet property="nameField" destination="6pD-bM-4gK" id="i5j-fL-FYd"/>
+                        <outlet property="updateButton" destination="1Rd-qE-rf6" id="h6d-0h-BcC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLW-H6-z3W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

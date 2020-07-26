@@ -19,9 +19,25 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateTodoField: UILabel!
     var dataSource: DataSource!
     
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = DataSource()
+        self.navigationItem.title = "\(user.name) さん 詳細ページ"
+        
+        editButton.layer.cornerRadius = 10
+        deleteButton.layer.cornerRadius = 10
+        editButton.layer.shadowColor = UIColor.gray.cgColor
+        editButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        editButton.layer.shadowOpacity = 0.3
+        editButton.layer.shadowRadius = 10
+        deleteButton.layer.shadowColor = UIColor.gray.cgColor
+        deleteButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        deleteButton.layer.shadowOpacity = 0.3
+        deleteButton.layer.shadowRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
