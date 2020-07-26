@@ -122,7 +122,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         newMatch.id = UUID().uuidString
         newMatch.name = name
         newMatch.matchDay = matchDay
-        newMatch.rank = "第\(dataSource.getRank())位"
+        newMatch.rank = dataSource.getRank()
         newMatch.impression = impression ?? ""
         newMatch.goodTopic = goodTopic ?? ""
         newMatch.badTopic = badTopic ?? ""

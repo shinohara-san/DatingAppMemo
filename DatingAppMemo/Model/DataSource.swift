@@ -6,7 +6,6 @@
 //  Copyright © 2020 Yuki Shinohara. All rights reserved.
 //
 
-////配列を順位の順番で昇順にして表示
 ////並び替えるときにランクを更新させる
 ////UIをシャレおつに
 ////アイコンをfigmaで
@@ -19,7 +18,7 @@ class DataSource {
     
     func getData(reload tableView: UITableView){
         let realm = try! Realm()
-        let data = realm.objects(User.self)
+        let data = realm.objects(User.self).sorted(byKeyPath: "rank", ascending: true)
         allPeople = Array(data)
         DispatchQueue.main.async {
             tableView.reloadData()
@@ -79,5 +78,42 @@ class DataSource {
         allPeople = Array(data)
         
         return allPeople.count + 1
+    }
+    
+    func updateRank(_ tableView: UITableView) {
+        let realm = try! Realm()
+        let data = realm.objects(User.self).sorted(byKeyPath: "rank", ascending: true)
+        let dataArray = Array(data)
+        
+//        allPeople = Array(data)
+//        print(allPeople)
+        for user in dataArray{
+           
+            for tempData in allPeople{
+                
+                 guard let data = realm.objects(User.self).filter("id == '\(user.id)'").first else {return}
+                
+                if tempData.id == data.id {
+                    
+                    guard let index = allPeople.firstIndex(of: tempData) else {return}
+
+                    try! realm.write{
+                        data.rank = index + 1
+                    }
+                }
+            }
+        }
+        
+        ///全部のユーザーデータを取得
+        ///元の場所のi番目でデータを取得
+        ///移動先のj番目に+1した数をrankに入れてupdate
+        
+        ///要素一つひとつ何番めかを取得してそのrankにそれぞれ+1してupdate
+        
+        ///移動が終わった段階でそれぞれの配列で何番目かを取得してrankをi番目+1でupdate
+        
+        DispatchQueue.main.async {
+            tableView.reloadData()
+        }
     }
 }
