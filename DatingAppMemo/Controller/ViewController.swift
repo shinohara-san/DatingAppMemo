@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
         dataSource = DataSource() ///この1行!!!!
-        dataSource.printPath()
+//        dataSource.printPath()
     }
     
     override func viewDidLayoutSubviews() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dataSource.getData(reload: tableView)
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,7 +83,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         dataSource.allPeople.remove(at: sourceIndexPath.row)
         dataSource.allPeople.insert(user, at: destinationIndexPath.row)
 //        print(dataSource.allPeople)
-        dataSource.updateRank(tableView)
+        dataSource.updateRank()
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {

@@ -19,7 +19,18 @@ class DataSource {
     func getData(reload tableView: UITableView){
         let realm = try! Realm()
         let data = realm.objects(User.self).sorted(byKeyPath: "rank", ascending: true)
-        allPeople = Array(data)
+        
+        let tempArray = Array(data)
+        
+        for user in tempArray {
+            guard let index = tempArray.firstIndex(of: user) else {return}
+            try! realm.write{
+                user.rank = index + 1
+            }
+        }
+        let newData = realm.objects(User.self).sorted(byKeyPath: "rank", ascending: true)
+        allPeople = Array(newData)
+        
         DispatchQueue.main.async {
             tableView.reloadData()
         }
@@ -80,13 +91,11 @@ class DataSource {
         return allPeople.count + 1
     }
     
-    func updateRank(_ tableView: UITableView) {
+    func updateRank() {
         let realm = try! Realm()
         let data = realm.objects(User.self).sorted(byKeyPath: "rank", ascending: true)
         let dataArray = Array(data)
         
-//        allPeople = Array(data)
-//        print(allPeople)
         for user in dataArray{
            
             for tempData in allPeople{
@@ -112,8 +121,8 @@ class DataSource {
         
         ///移動が終わった段階でそれぞれの配列で何番目かを取得してrankをi番目+1でupdate
         
-        DispatchQueue.main.async {
-            tableView.reloadData()
-        }
+//        DispatchQueue.main.async {
+//            tableView.reloadData()
+//        }
     }
 }
