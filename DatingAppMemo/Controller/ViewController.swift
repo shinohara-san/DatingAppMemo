@@ -44,6 +44,26 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func heartButtonTapped(_ sender: Any) {
+        let ac = UIAlertController(title: "Twitterでつぶやく", message: "", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "つぶやく", style: .default, handler: { _ in
+            self.tweet()
+        }))
+        ac.addAction(UIAlertAction(title: "後でつぶやく", style: .destructive, handler: nil))
+        
+        present(ac, animated: true)
+    }
+    
+    func tweet(){
+        let url = ""
+        let text = "このアプリでマッチしたユーザーを管理できます。インストールはこちら->\(url)"
+        let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let encodedText = encodedText,
+            let url = URL(string: "https://twitter.com/intent/tweet?text=\(encodedText)") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
 }
 
 

@@ -31,7 +31,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "新規マッチユーザー入力"
+        self.navigationItem.title = "新規入力"
         
         saveButton.layer.cornerRadius = 10
         saveButton.layer.shadowColor = UIColor.gray.cgColor
