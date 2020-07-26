@@ -51,8 +51,18 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = dataSource.data(at: indexPath.row)?.name
-        cell.detailTextLabel?.text = "第\(dataSource.data(at: indexPath.row)?.rank ?? 0)位"
+        cell.textLabel?.text = "\(dataSource.data(at: indexPath.row)?.name ?? "") さん"
+        
+        if dataSource.data(at: indexPath.row)?.rank == 1 {
+            cell.detailTextLabel?.text = "🥇"
+        } else if  dataSource.data(at: indexPath.row)?.rank == 2 {
+            cell.detailTextLabel?.text = "🥈"
+        } else if  dataSource.data(at: indexPath.row)?.rank == 3 {
+            cell.detailTextLabel?.text = "🥉"
+        } else {
+            cell.detailTextLabel?.text = "第\(dataSource.data(at: indexPath.row)?.rank ?? 0)位"
+        }
+//        cell.detailTextLabel?.text = "第\(dataSource.data(at: indexPath.row)?.rank ?? 0)位"
 //        print(indexPath.row)
         return cell
     }
@@ -75,14 +85,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         // TODO: 入れ替え時の処理を実装する（データ制御など）
-//        print(sourceIndexPath.row)
-//        print(destinationIndexPath.row)
-//        print(tableView.indexPathsForVisibleRows!)
-//        print(dataSource.allPeople)
         let user = dataSource.allPeople[sourceIndexPath.row]
         dataSource.allPeople.remove(at: sourceIndexPath.row)
         dataSource.allPeople.insert(user, at: destinationIndexPath.row)
-//        print(dataSource.allPeople)
         dataSource.updateRank()
         tableView.reloadData()
     }

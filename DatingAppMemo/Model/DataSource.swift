@@ -6,7 +6,6 @@
 //  Copyright © 2020 Yuki Shinohara. All rights reserved.
 //
 
-////並び替えるときにランクを更新させる
 ////UIをシャレおつに
 ////アイコンをfigmaで
 
@@ -97,32 +96,20 @@ class DataSource {
         let dataArray = Array(data)
         
         for user in dataArray{
-           
+            
             for tempData in allPeople{
                 
-                 guard let data = realm.objects(User.self).filter("id == '\(user.id)'").first else {return}
+                guard let data = realm.objects(User.self).filter("id == '\(user.id)'").first else {return}
                 
                 if tempData.id == data.id {
                     
                     guard let index = allPeople.firstIndex(of: tempData) else {return}
-
+                    
                     try! realm.write{
                         data.rank = index + 1
                     }
                 }
             }
         }
-        
-        ///全部のユーザーデータを取得
-        ///元の場所のi番目でデータを取得
-        ///移動先のj番目に+1した数をrankに入れてupdate
-        
-        ///要素一つひとつ何番めかを取得してそのrankにそれぞれ+1してupdate
-        
-        ///移動が終わった段階でそれぞれの配列で何番目かを取得してrankをi番目+1でupdate
-        
-//        DispatchQueue.main.async {
-//            tableView.reloadData()
-//        }
     }
 }
