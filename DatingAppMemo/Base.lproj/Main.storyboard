@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このアプリについて" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m05-CR-jsK">
-                                <rect key="frame" x="30" y="74" width="354" height="30"/>
+                                <rect key="frame" x="30" y="64" width="354" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nph-8u-XUo"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWB-pL-Grd">
-                                <rect key="frame" x="20" y="802" width="374" height="30"/>
+                                <rect key="frame" x="20" y="812" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hyT-Ap-UQL"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQN-bS-fJW">
-                                <rect key="frame" x="20" y="272" width="374" height="510"/>
+                                <rect key="frame" x="20" y="244" width="374" height="548"/>
                                 <string key="text">マッチングアプリでマッチしたユーザーごとに情報を入力していきましょう。
 
 お気に入りユーザーをランキング上位に並び替えることができます。
@@ -145,10 +145,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="zwT-Ed-ih9">
-                                <rect key="frame" x="143" y="124" width="128" height="128"/>
+                                <rect key="frame" x="152" y="114" width="110" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="HjM-sj-UHy"/>
-                                    <constraint firstAttribute="height" constant="128" id="Nff-5C-iEv"/>
+                                    <constraint firstAttribute="width" constant="110" id="HjM-sj-UHy"/>
+                                    <constraint firstAttribute="height" constant="110" id="Nff-5C-iEv"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -163,8 +163,8 @@
                             <constraint firstItem="zwT-Ed-ih9" firstAttribute="centerX" secondItem="0AY-Y5-0wq" secondAttribute="centerX" id="V2R-h2-zfv"/>
                             <constraint firstItem="CQN-bS-fJW" firstAttribute="top" secondItem="zwT-Ed-ih9" secondAttribute="bottom" constant="20" id="fvM-pw-OvG"/>
                             <constraint firstItem="CQN-bS-fJW" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="20" id="gnY-5S-lGS"/>
-                            <constraint firstItem="QeK-qg-q6u" firstAttribute="bottom" secondItem="EWB-pL-Grd" secondAttribute="bottom" constant="30" id="jma-Fm-msb"/>
-                            <constraint firstItem="m05-CR-jsK" firstAttribute="top" secondItem="QeK-qg-q6u" secondAttribute="top" constant="30" id="suX-KG-4K5"/>
+                            <constraint firstItem="QeK-qg-q6u" firstAttribute="bottom" secondItem="EWB-pL-Grd" secondAttribute="bottom" constant="20" id="jma-Fm-msb"/>
+                            <constraint firstItem="m05-CR-jsK" firstAttribute="top" secondItem="QeK-qg-q6u" secondAttribute="top" constant="20" id="suX-KG-4K5"/>
                             <constraint firstItem="EWB-pL-Grd" firstAttribute="top" secondItem="CQN-bS-fJW" secondAttribute="bottom" constant="20" id="ybD-Hw-JcS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QeK-qg-q6u"/>
