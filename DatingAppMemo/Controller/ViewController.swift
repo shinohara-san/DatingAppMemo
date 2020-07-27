@@ -15,6 +15,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "マッチングユーザーリスト"
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)

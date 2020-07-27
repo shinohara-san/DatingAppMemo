@@ -11,6 +11,7 @@ import UIKit
 class ModalViewController: UIViewController {
     
     @IBOutlet weak var tweetButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tweetButton.layer.cornerRadius = 10.0
@@ -18,6 +19,9 @@ class ModalViewController: UIViewController {
         tweetButton.layer.shadowOffset = CGSize(width: 0, height: 10)
         tweetButton.layer.shadowOpacity = 0.3
         tweetButton.layer.shadowRadius = 10
+        
+        imageView.layer.cornerRadius = imageView.frame.size.width * 0.1
+        imageView.clipsToBounds = true
     }
     
     @IBAction func tweetButtonTapped(_ sender: Any) {
