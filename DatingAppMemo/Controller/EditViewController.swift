@@ -52,6 +52,8 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         datePicker.datePickerMode = .date
         datePicker.timeZone = NSTimeZone.local
         datePicker.locale = Locale.current
+        let calendar = Calendar(identifier: .gregorian)
+        datePicker.calendar = calendar
         matchDayField.inputView = datePicker
         
         //DONEボタンの設定・配置
@@ -81,20 +83,20 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         matchDayField.endEditing(true)
         // 日付のフォーマット
         let matchdate = datePicker.date
-        let components = Calendar.current.dateComponents([.calendar, .year, .month, .day], from: matchdate)
-        
-        var comp = DateComponents()
-        comp.year = components.year
-        comp.month = components.month
-        comp.day = components.day
-        
-        guard let date = (Calendar.init(identifier: .japanese)).date(from: comp) else {return}
+//        let components = Calendar.current.dateComponents([.calendar, .year, .month, .day], from: matchdate)
+//
+//        var comp = DateComponents()
+//        comp.year = components.year
+//        comp.month = components.month
+//        comp.day = components.day
+//
+//        guard let date = (Calendar.init(identifier: .japanese)).date(from: comp) else {return}
         
         let formatter = DateFormatter()
         formatter.locale = Locale.init(identifier: "ja_JP")
         formatter.dateFormat = "yyyy/MM/dd"
         
-        matchDayField.text = "\(formatter.string(from: date))"
+        matchDayField.text = "\(formatter.string(from: matchdate))"
     }
     
     

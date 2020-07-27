@@ -18,4 +18,8 @@ class MyColor: UIColor {
       override class var black: UIColor {
         return UIColor(red: 17.0 / 255.0, green: 17.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0)
       }
+    
+    override class var white: UIColor {
+      return UIColor(red: 250 / 255.0, green: 250 / 255.0, blue: 250 / 255.0, alpha: 1.0)
+    }
 }

@@ -15,7 +15,7 @@ class MyNavigationViewController: UINavigationController {
         //　ナビゲーションバーの背景色
         navigationBar.barTintColor = MyColor.peach
         // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
-        navigationBar.tintColor = .white
+        navigationBar.tintColor = MyColor.white
         // ナビゲーションバーのテキストを変更する
         navigationBar.titleTextAttributes = [
             // 文字の色

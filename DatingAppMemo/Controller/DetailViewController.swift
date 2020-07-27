@@ -59,7 +59,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func editButtonTapped(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "edit") as! EditViewController
-        vc.user = self.user
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
 
     }

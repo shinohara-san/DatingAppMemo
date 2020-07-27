@@ -53,14 +53,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="287" height="30"/>
                                         <color key="backgroundColor" red="0.80392156862745101" green="0.70980392156862748" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ランキング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-s1-7Ns">
                                         <rect key="frame" x="287" y="0.0" width="87" height="30"/>
                                         <color key="backgroundColor" red="0.80392156862745101" green="0.70980392156862748" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -83,7 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="マッチユーザーリスト" id="Hhf-6y-GMg">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="suit.heart.fill" catalog="system" id="hIP-LW-8VA">
-                            <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="heartButtonTapped:" destination="BYZ-38-t0r" id="Yyw-w2-AAA"/>
                             </connections>
@@ -127,36 +127,45 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="つぶやく">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tweetButtonTapped:" destination="AzL-Dg-2CS" eventType="touchUpInside" id="62y-wv-u0I"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQN-bS-fJW">
-                                <rect key="frame" x="20" y="154" width="374" height="598"/>
-                                <mutableString key="text">以前のGoogle+のロゴは明るい色の組み合わせでした（Google Chromeのロゴと同じような色です）が、いまはHex：#DB4437、RGB：rgb（219、68、55）を使用しています。Googleは、この色をGoogle+Redと呼んでいます。Google+は黄色以外のほかの色をWebサイトに使用しています。
+                                <rect key="frame" x="20" y="272" width="374" height="510"/>
+                                <string key="text">マッチングアプリでマッチしたユーザーごとに情報を入力していきましょう。
 
-Google+Red：#DB4437ーrgb（219、68、55）
-Google+ Green：#0F9D58ーrgb（0、128、0）
-Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
+お気に入りユーザーをランキング上位に並び替えることができます。
+
+一つ一つの出会いを大切に、楽しいマッチングアプリライフを！</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="zwT-Ed-ih9">
+                                <rect key="frame" x="143" y="124" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="HjM-sj-UHy"/>
+                                    <constraint firstAttribute="height" constant="128" id="Nff-5C-iEv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CQN-bS-fJW" firstAttribute="top" secondItem="m05-CR-jsK" secondAttribute="bottom" constant="50" id="54y-Er-L0Z"/>
                             <constraint firstItem="m05-CR-jsK" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="30" id="7Ie-G3-lv7"/>
                             <constraint firstItem="EWB-pL-Grd" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="20" id="D5U-RZ-hbT"/>
                             <constraint firstItem="QeK-qg-q6u" firstAttribute="trailing" secondItem="EWB-pL-Grd" secondAttribute="trailing" constant="20" id="HUg-Zy-XQL"/>
+                            <constraint firstItem="zwT-Ed-ih9" firstAttribute="top" secondItem="m05-CR-jsK" secondAttribute="bottom" constant="20" id="HvG-Ak-Ull"/>
                             <constraint firstItem="QeK-qg-q6u" firstAttribute="trailing" secondItem="CQN-bS-fJW" secondAttribute="trailing" constant="20" id="St9-Do-vlw"/>
                             <constraint firstItem="QeK-qg-q6u" firstAttribute="trailing" secondItem="m05-CR-jsK" secondAttribute="trailing" constant="30" id="TDy-lj-Cyf"/>
+                            <constraint firstItem="zwT-Ed-ih9" firstAttribute="centerX" secondItem="0AY-Y5-0wq" secondAttribute="centerX" id="V2R-h2-zfv"/>
+                            <constraint firstItem="CQN-bS-fJW" firstAttribute="top" secondItem="zwT-Ed-ih9" secondAttribute="bottom" constant="20" id="fvM-pw-OvG"/>
                             <constraint firstItem="CQN-bS-fJW" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="20" id="gnY-5S-lGS"/>
                             <constraint firstItem="QeK-qg-q6u" firstAttribute="bottom" secondItem="EWB-pL-Grd" secondAttribute="bottom" constant="30" id="jma-Fm-msb"/>
                             <constraint firstItem="m05-CR-jsK" firstAttribute="top" secondItem="QeK-qg-q6u" secondAttribute="top" constant="30" id="suX-KG-4K5"/>
-                            <constraint firstItem="EWB-pL-Grd" firstAttribute="top" secondItem="CQN-bS-fJW" secondAttribute="bottom" constant="50" id="ybD-Hw-JcS"/>
+                            <constraint firstItem="EWB-pL-Grd" firstAttribute="top" secondItem="CQN-bS-fJW" secondAttribute="bottom" constant="20" id="ybD-Hw-JcS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QeK-qg-q6u"/>
                     </view>
@@ -283,7 +292,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <state key="normal" title="編集">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="editButtonTapped:" destination="lEg-25-LaV" eventType="touchUpInside" id="SQ1-KT-fY9"/>
@@ -297,7 +306,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <state key="normal" title="削除">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="deleteButtonTapped:" destination="lEg-25-LaV" eventType="touchUpInside" id="Zg4-ci-slV"/>
@@ -431,6 +440,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-Td-7Uz">
                                                                         <rect key="frame" x="62" y="0.0" width="312" height="34"/>
+                                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -447,6 +457,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kN4-gZ-WCi">
                                                                         <rect key="frame" x="114" y="0.0" width="260" height="34"/>
+                                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -463,7 +474,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RQh-Zd-fcR">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="ReU-9a-MuT"/>
                                                                         </constraints>
@@ -484,7 +495,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-F7-hcA">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="T3z-OR-hXJ"/>
                                                                         </constraints>
@@ -505,7 +516,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oQg-uV-vRu">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="bOM-xu-yTu"/>
                                                                         </constraints>
@@ -526,7 +537,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CaO-Jk-gPG">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="Ops-1q-aYU"/>
                                                                         </constraints>
@@ -568,7 +579,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                 <color key="backgroundColor" red="0.93333333333333335" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <state key="normal" title="保存">
-                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="saveButtonTapped:" destination="o8m-Yv-q1R" eventType="touchUpInside" id="SEp-nP-Vcl"/>
@@ -674,6 +685,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pD-bM-4gK">
                                                                         <rect key="frame" x="62" y="0.0" width="312" height="34"/>
+                                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -690,6 +702,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3p-PW-NXg">
                                                                         <rect key="frame" x="114" y="0.0" width="260" height="34"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -706,7 +719,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-AF-LrY">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="Mbh-KN-KBr"/>
                                                                         </constraints>
@@ -727,7 +740,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-Px-ADn">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="LJY-bH-2PK"/>
                                                                         </constraints>
@@ -748,7 +761,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wMR-um-jmS">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="tsQ-HL-b6d"/>
                                                                         </constraints>
@@ -769,7 +782,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="deh-76-hY5">
                                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="200"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="ykN-v7-iw9"/>
                                                                         </constraints>
@@ -869,6 +882,7 @@ Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
         </scene>
     </scenes>
     <resources>
+        <image name="iTunesArtwork" width="512" height="512"/>
         <image name="person.badge.plus" catalog="system" width="128" height="116"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
     </resources>

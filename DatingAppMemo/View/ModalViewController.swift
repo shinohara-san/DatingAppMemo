@@ -18,19 +18,19 @@ class ModalViewController: UIViewController {
         tweetButton.layer.shadowOffset = CGSize(width: 0, height: 10)
         tweetButton.layer.shadowOpacity = 0.3
         tweetButton.layer.shadowRadius = 10
-        
     }
     
     @IBAction func tweetButtonTapped(_ sender: Any) {
-        func tweet(){
-            let url = ""
-            let text = "このアプリでマッチしたユーザーを管理できます。インストールはこちら->\(url)"
-            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            if let encodedText = encodedText,
-                let url = URL(string: "https://twitter.com/intent/tweet?text=\(encodedText)") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
+        tweet()
     }
     
+    func tweet(){
+        let url = ""
+        let text = "このアプリでマッチングしたユーザーを管理できます！インストールはこちら \(url)"
+        let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let encodedText = encodedText,
+            let url = URL(string: "https://twitter.com/intent/tweet?text=\(encodedText)") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
