@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--マッチユーザ一覧-->
+        <!--マッチユーザーリスト-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatingAppMemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="マッチユーザ一覧" id="Hhf-6y-GMg">
+                    <navigationItem key="navigationItem" title="マッチユーザーリスト" id="Hhf-6y-GMg">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="suit.heart.fill" catalog="system" id="hIP-LW-8VA">
                             <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -101,6 +101,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="Aq5-Ut-7b7">
+            <objects>
+                <viewController storyboardIdentifier="modal" id="AzL-Dg-2CS" customClass="ModalViewController" customModule="DatingAppMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0AY-Y5-0wq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このアプリについて" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m05-CR-jsK">
+                                <rect key="frame" x="30" y="74" width="354" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nph-8u-XUo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066004922945205477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWB-pL-Grd">
+                                <rect key="frame" x="20" y="802" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hyT-Ap-UQL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="つぶやく">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetButtonTapped:" destination="AzL-Dg-2CS" eventType="touchUpInside" id="62y-wv-u0I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQN-bS-fJW">
+                                <rect key="frame" x="20" y="154" width="374" height="598"/>
+                                <mutableString key="text">以前のGoogle+のロゴは明るい色の組み合わせでした（Google Chromeのロゴと同じような色です）が、いまはHex：#DB4437、RGB：rgb（219、68、55）を使用しています。Googleは、この色をGoogle+Redと呼んでいます。Google+は黄色以外のほかの色をWebサイトに使用しています。
+
+Google+Red：#DB4437ーrgb（219、68、55）
+Google+ Green：#0F9D58ーrgb（0、128、0）
+Google+Blue：#2962FFーrgb（41、98、255）</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CQN-bS-fJW" firstAttribute="top" secondItem="m05-CR-jsK" secondAttribute="bottom" constant="50" id="54y-Er-L0Z"/>
+                            <constraint firstItem="m05-CR-jsK" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="30" id="7Ie-G3-lv7"/>
+                            <constraint firstItem="EWB-pL-Grd" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="20" id="D5U-RZ-hbT"/>
+                            <constraint firstItem="QeK-qg-q6u" firstAttribute="trailing" secondItem="EWB-pL-Grd" secondAttribute="trailing" constant="20" id="HUg-Zy-XQL"/>
+                            <constraint firstItem="QeK-qg-q6u" firstAttribute="trailing" secondItem="CQN-bS-fJW" secondAttribute="trailing" constant="20" id="St9-Do-vlw"/>
+                            <constraint firstItem="QeK-qg-q6u" firstAttribute="trailing" secondItem="m05-CR-jsK" secondAttribute="trailing" constant="30" id="TDy-lj-Cyf"/>
+                            <constraint firstItem="CQN-bS-fJW" firstAttribute="leading" secondItem="QeK-qg-q6u" secondAttribute="leading" constant="20" id="gnY-5S-lGS"/>
+                            <constraint firstItem="QeK-qg-q6u" firstAttribute="bottom" secondItem="EWB-pL-Grd" secondAttribute="bottom" constant="30" id="jma-Fm-msb"/>
+                            <constraint firstItem="m05-CR-jsK" firstAttribute="top" secondItem="QeK-qg-q6u" secondAttribute="top" constant="30" id="suX-KG-4K5"/>
+                            <constraint firstItem="EWB-pL-Grd" firstAttribute="top" secondItem="CQN-bS-fJW" secondAttribute="bottom" constant="50" id="ybD-Hw-JcS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QeK-qg-q6u"/>
+                    </view>
+                    <connections>
+                        <outlet property="tweetButton" destination="EWB-pL-Grd" id="Km4-je-qox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZN-zN-eXk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="909"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="6mT-Cq-Cg9">
@@ -156,7 +222,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA3-xJ-Mvz">
-                                                        <rect key="frame" x="20" y="270" width="374" height="30"/>
+                                                        <rect key="frame" x="20" y="270" width="374" height="319.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="250" constant="30" id="5fT-aa-0EI"/>
                                                         </constraints>
@@ -165,13 +231,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り上がった話題" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-d7-Ftf">
-                                                        <rect key="frame" x="20" y="320" width="374" height="30"/>
+                                                        <rect key="frame" x="20" y="609.5" width="374" height="30"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <color key="textColor" red="0.93333333330000001" green="0.56078431370000004" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-rj-x5Z">
-                                                        <rect key="frame" x="20" y="370" width="374" height="319.5"/>
+                                                        <rect key="frame" x="20" y="659.5" width="374" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="250" constant="30" id="RRd-p8-bIz"/>
                                                         </constraints>
@@ -360,7 +426,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxh-xL-aMd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="52" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-Td-7Uz">
@@ -376,7 +442,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチした日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiG-27-MpU">
                                                                         <rect key="frame" x="0.0" y="0.0" width="104" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kN4-gZ-WCi">
@@ -392,7 +458,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="印象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-ZH-Ubo">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RQh-Zd-fcR">
@@ -413,7 +479,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り上がった話題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd4-NN-AzT">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-F7-hcA">
@@ -434,7 +500,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り下がった話題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asQ-EE-v51">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oQg-uV-vRu">
@@ -455,7 +521,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デートTODO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haR-9L-pwj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CaO-Jk-gPG">
@@ -494,7 +560,7 @@
 
 十.   3回目で告白する！</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-51-5oa">
@@ -603,7 +669,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jST-4R-cNs">
                                                                         <rect key="frame" x="0.0" y="0.0" width="52" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pD-bM-4gK">
@@ -619,7 +685,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチした日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-KR-MWz">
                                                                         <rect key="frame" x="0.0" y="0.0" width="104" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="必須" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3p-PW-NXg">
@@ -635,7 +701,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="印象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLX-Ve-Dhj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-AF-LrY">
@@ -656,7 +722,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り上がった話題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-sX-AXv">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GbJ-Px-ADn">
@@ -677,7 +743,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盛り下がった話題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0c-SF-XoD">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wMR-um-jmS">
@@ -698,7 +764,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デートTODO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeM-Zk-aVo">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="deh-76-hY5">
@@ -737,7 +803,7 @@
 
 十.   3回目で告白する！</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066004922950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rd-qE-rf6">

@@ -38,6 +38,13 @@ class DetailViewController: UIViewController {
         deleteButton.layer.shadowOffset = CGSize(width: 0, height: 10)
         deleteButton.layer.shadowOpacity = 0.3
         deleteButton.layer.shadowRadius = 10
+        
+        nameField.textColor = MyColor.black
+        matchDayField.textColor = MyColor.black
+        impressionField.textColor = MyColor.black
+        goodTopicField.textColor = MyColor.black
+        badTopicField.textColor = MyColor.black
+        dateTodoField.textColor = MyColor.black
     }
     
     override func viewWillAppear(_ animated: Bool) {

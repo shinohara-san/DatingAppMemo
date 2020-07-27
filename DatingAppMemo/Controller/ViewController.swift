@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     var dataSource: DataSource!
     @IBOutlet weak var tableView: UITableView!
@@ -45,23 +45,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func heartButtonTapped(_ sender: Any) {
-        let ac = UIAlertController(title: "Twitterでつぶやく", message: "", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "つぶやく", style: .default, handler: { _ in
-            self.tweet()
-        }))
-        ac.addAction(UIAlertAction(title: "後でつぶやく", style: .destructive, handler: nil))
-        
-        present(ac, animated: true)
+        let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "modal")
+        modalVC!.modalPresentationStyle = .custom
+        modalVC!.transitioningDelegate = self
+        present(modalVC!, animated: true, completion: nil)
     }
     
-    func tweet(){
-        let url = ""
-        let text = "このアプリでマッチしたユーザーを管理できます。インストールはこちら->\(url)"
-        let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        if let encodedText = encodedText,
-            let url = URL(string: "https://twitter.com/intent/tweet?text=\(encodedText)") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return PresentationController(presentedViewController: presented, presenting: presenting)
     }
     
 }
@@ -71,7 +62,10 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
         cell.textLabel?.text = "\(dataSource.data(at: indexPath.row)?.name ?? "") さん"
+        cell.textLabel?.textColor = MyColor.black
+        cell.detailTextLabel?.textColor = MyColor.black
         
         if dataSource.data(at: indexPath.row)?.rank == 1 {
             cell.detailTextLabel?.text = "🥇"

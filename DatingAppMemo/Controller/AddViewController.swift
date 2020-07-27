@@ -46,6 +46,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         badTopicField.delegate = self
         dateTodoField.delegate = self
         
+        nameField.textColor = MyColor.black
+        matchDayField.textColor = MyColor.black
+        impressionField.textColor = MyColor.black
+        goodTopicField.textColor = MyColor.black
+        badTopicField.textColor = MyColor.black
+        dateTodoField.textColor = MyColor.black
+        
         dataSource = DataSource() ///この1行!!!!
         
         datePicker.datePickerMode = .date

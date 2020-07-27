@@ -20,6 +20,9 @@
 		9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0C24CA706100F57495 /* AddViewController.swift */; };
 		9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0E24CA706C00F57495 /* DetailViewController.swift */; };
 		9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */; };
+		954FA20624CD941300C3B115 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20524CD941300C3B115 /* ModalViewController.swift */; };
+		954FA20824CD943C00C3B115 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20724CD943C00C3B115 /* PresentationController.swift */; };
+		954FA20A24CE526200C3B115 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20924CE526200C3B115 /* MyColor.swift */; };
 		95E15CA024CBC92A008EB256 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E15C9F24CBC92A008EB256 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		9521DD0C24CA706100F57495 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		9521DD0E24CA706C00F57495 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationViewController.swift; sourceTree = "<group>"; };
+		954FA20524CD941300C3B115 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		954FA20724CD943C00C3B115 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		954FA20924CE526200C3B115 /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		95E15C9F24CBC92A008EB256 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 				9521DD0C24CA706100F57495 /* AddViewController.swift */,
 				9521DD0E24CA706C00F57495 /* DetailViewController.swift */,
 				95E15C9F24CBC92A008EB256 /* EditViewController.swift */,
+				954FA20724CD943C00C3B115 /* PresentationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			children = (
 				9521DD0724CA6EC000F57495 /* User.swift */,
 				9521DD0924CA704D00F57495 /* DataSource.swift */,
+				954FA20924CE526200C3B115 /* MyColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */,
+				954FA20524CD941300C3B115 /* ModalViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,9 +299,12 @@
 				9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */,
 				9521DD0824CA6EC000F57495 /* User.swift in Sources */,
 				9521DCF524CA6E7F00F57495 /* ViewController.swift in Sources */,
+				954FA20824CD943C00C3B115 /* PresentationController.swift in Sources */,
 				9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */,
+				954FA20A24CE526200C3B115 /* MyColor.swift in Sources */,
 				9521DCF124CA6E7F00F57495 /* AppDelegate.swift in Sources */,
 				9521DD0A24CA704D00F57495 /* DataSource.swift in Sources */,
+				954FA20624CD941300C3B115 /* ModalViewController.swift in Sources */,
 				9521DCF324CA6E7F00F57495 /* SceneDelegate.swift in Sources */,
 				9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */,
 				95E15CA024CBC92A008EB256 /* EditViewController.swift in Sources */,
