@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95214F7824CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */; };
-		95214F7924CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9521DCF124CA6E7F00F57495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF024CA6E7F00F57495 /* AppDelegate.swift */; };
-		9521DCF324CA6E7F00F57495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */; };
-		9521DCF524CA6E7F00F57495 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF424CA6E7F00F57495 /* ViewController.swift */; };
 		9521DCF824CA6E7F00F57495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9521DCF624CA6E7F00F57495 /* Main.storyboard */; };
 		9521DCFA24CA6E8300F57495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9521DCF924CA6E8300F57495 /* Assets.xcassets */; };
 		9521DCFD24CA6E8300F57495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9521DCFB24CA6E8300F57495 /* LaunchScreen.storyboard */; };
-		9521DD0824CA6EC000F57495 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0724CA6EC000F57495 /* User.swift */; };
-		9521DD0A24CA704D00F57495 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0924CA704D00F57495 /* DataSource.swift */; };
-		9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0C24CA706100F57495 /* AddViewController.swift */; };
-		9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0E24CA706C00F57495 /* DetailViewController.swift */; };
-		9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */; };
-		954FA20624CD941300C3B115 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20524CD941300C3B115 /* ModalViewController.swift */; };
-		954FA20824CD943C00C3B115 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20724CD943C00C3B115 /* PresentationController.swift */; };
-		954FA20A24CE526200C3B115 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20924CE526200C3B115 /* MyColor.swift */; };
 		954FA21224CE786800C3B115 /* DatingAppMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA21124CE786800C3B115 /* DatingAppMemoTests.swift */; };
-		95E15CA024CBC92A008EB256 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E15C9F24CBC92A008EB256 /* EditViewController.swift */; };
+		957FB16A24CEC4EA00094200 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		959F7BE124CED79E005CE061 /* MyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD1024CA7BE200F57495 /* MyNavigationViewController.swift */; };
+		959F7BE224CED79E005CE061 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20524CD941300C3B115 /* ModalViewController.swift */; };
+		959F7BE324CED79E005CE061 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0724CA6EC000F57495 /* User.swift */; };
+		959F7BE424CED79E005CE061 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0924CA704D00F57495 /* DataSource.swift */; };
+		959F7BE524CED79E005CE061 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20924CE526200C3B115 /* MyColor.swift */; };
+		959F7BE624CED79E005CE061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF424CA6E7F00F57495 /* ViewController.swift */; };
+		959F7BE724CED79E005CE061 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0C24CA706100F57495 /* AddViewController.swift */; };
+		959F7BE824CED79E005CE061 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DD0E24CA706C00F57495 /* DetailViewController.swift */; };
+		959F7BE924CED79E005CE061 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E15C9F24CBC92A008EB256 /* EditViewController.swift */; };
+		959F7BEA24CED79F005CE061 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA20724CD943C00C3B115 /* PresentationController.swift */; };
+		959F7BEB24CED79F005CE061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF024CA6E7F00F57495 /* AppDelegate.swift */; };
+		959F7BEC24CED79F005CE061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */; };
+		959F7BEF24CEDED6005CE061 /* Pods_DatingAppMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959F7BEE24CEDED6005CE061 /* Pods_DatingAppMemo.framework */; };
+		959F7BF124CEF1E2005CE061 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 959F7BF024CEF1E2005CE061 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,25 +39,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		95214F7A24CA9C2F0010ED01 /* Embed Frameworks */ = {
+		957FB16624CEC28100094200 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				95214F7924CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Embed Frameworks */,
+				957FB16A24CEC4EA00094200 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		959F7BF524CEFE8D005CE061 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatingAppMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.release.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.release.xcconfig"; sourceTree = "<group>"; };
-		9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.debug.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.debug.xcconfig"; sourceTree = "<group>"; };
-		95214F7224CA94AF0010ED01 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DatingAppMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4824DA5F55AD7D7133E3DCF7 /* Pods-DatingAppMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.release.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.release.xcconfig"; sourceTree = "<group>"; };
 		9521DCED24CA6E7F00F57495 /* DatingAppMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatingAppMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9521DCF024CA6E7F00F57495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9521DCF224CA6E7F00F57495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,22 +83,25 @@
 		954FA20F24CE786800C3B115 /* DatingAppMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatingAppMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		954FA21124CE786800C3B115 /* DatingAppMemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingAppMemoTests.swift; sourceTree = "<group>"; };
 		954FA21324CE786800C3B115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959F7BEE24CEDED6005CE061 /* Pods_DatingAppMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DatingAppMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		959F7BF024CEF1E2005CE061 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		95E15C9F24CBC92A008EB256 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		DBA5D890B885072C3179D319 /* Pods-DatingAppMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatingAppMemo.debug.xcconfig"; path = "Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9521DCEA24CA6E7F00F57495 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95214F7824CA9C2F0010ED01 /* Pods_DatingAppMemo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		954FA20C24CE786800C3B115 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		959F7BED24CEDE4D005CE061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959F7BEF24CEDED6005CE061 /* Pods_DatingAppMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +115,7 @@
 				954FA21024CE786800C3B115 /* DatingAppMemoTests */,
 				9521DCEE24CA6E7F00F57495 /* Products */,
 				F322BD6AED58261FC9685BC1 /* Pods */,
-				F15A3AE335A8BF8AFE4F05CF /* Frameworks */,
+				E54E487F5AA5DD177E2A5D4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +140,7 @@
 				9521DCF924CA6E8300F57495 /* Assets.xcassets */,
 				9521DCFB24CA6E8300F57495 /* LaunchScreen.storyboard */,
 				9521DCFE24CA6E8300F57495 /* Info.plist */,
+				959F7BF024CEF1E2005CE061 /* Settings.bundle */,
 			);
 			path = DatingAppMemo;
 			sourceTree = "<group>";
@@ -174,12 +185,10 @@
 			path = DatingAppMemoTests;
 			sourceTree = "<group>";
 		};
-		F15A3AE335A8BF8AFE4F05CF /* Frameworks */ = {
+		E54E487F5AA5DD177E2A5D4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95214F7724CA9C2F0010ED01 /* Pods_DatingAppMemo.framework */,
-				95214F7224CA94AF0010ED01 /* Realm.framework */,
-				027D1BBF284A621AB4AFA2BB /* Pods_DatingAppMemo.framework */,
+				959F7BEE24CEDED6005CE061 /* Pods_DatingAppMemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,8 +196,8 @@
 		F322BD6AED58261FC9685BC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */,
-				5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */,
+				DBA5D890B885072C3179D319 /* Pods-DatingAppMemo.debug.xcconfig */,
+				4824DA5F55AD7D7133E3DCF7 /* Pods-DatingAppMemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -200,13 +209,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9521DD0124CA6E8300F57495 /* Build configuration list for PBXNativeTarget "DatingAppMemo" */;
 			buildPhases = (
-				EB0B5CF9E56B21DB93557BED /* [CP] Check Pods Manifest.lock */,
-				9521DCE924CA6E7F00F57495 /* Sources */,
-				9521DCEA24CA6E7F00F57495 /* Frameworks */,
+				13D93633442F560F05A814E6 /* [CP] Check Pods Manifest.lock */,
 				9521DCEB24CA6E7F00F57495 /* Resources */,
-				3B22837F509364DC95715A3B /* [CP] Embed Pods Frameworks */,
 				95214F7624CA94D70010ED01 /* ShellScript */,
-				95214F7A24CA9C2F0010ED01 /* Embed Frameworks */,
+				957FB15C24CEA19D00094200 /* LicensePlist */,
+				957FB16624CEC28100094200 /* Embed Frameworks */,
+				AAEC20A6769405804BD3AF9D /* [CP] Embed Pods Frameworks */,
+				959F7BE024CED78A005CE061 /* Sources */,
+				959F7BED24CEDE4D005CE061 /* Frameworks */,
+				959F7BF524CEFE8D005CE061 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -278,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959F7BF124CEF1E2005CE061 /* Settings.bundle in Resources */,
 				9521DCFD24CA6E8300F57495 /* LaunchScreen.storyboard in Resources */,
 				9521DCFA24CA6E8300F57495 /* Assets.xcassets in Resources */,
 				9521DCF824CA6E7F00F57495 /* Main.storyboard in Resources */,
@@ -294,42 +306,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B22837F509364DC95715A3B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95214F7624CA94D70010ED01 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
-		};
-		EB0B5CF9E56B21DB93557BED /* [CP] Check Pods Manifest.lock */ = {
+		13D93633442F560F05A814E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,33 +328,87 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		95214F7624CA94D70010ED01 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		957FB15C24CEA19D00094200 /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PROJECT_NAME/Settings.bundle\nfi\n";
+		};
+		AAEC20A6769405804BD3AF9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatingAppMemo/Pods-DatingAppMemo-frameworks.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9521DCE924CA6E7F00F57495 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9521DD1124CA7BE200F57495 /* MyNavigationViewController.swift in Sources */,
-				9521DD0824CA6EC000F57495 /* User.swift in Sources */,
-				9521DCF524CA6E7F00F57495 /* ViewController.swift in Sources */,
-				954FA20824CD943C00C3B115 /* PresentationController.swift in Sources */,
-				9521DD0D24CA706100F57495 /* AddViewController.swift in Sources */,
-				954FA20A24CE526200C3B115 /* MyColor.swift in Sources */,
-				9521DCF124CA6E7F00F57495 /* AppDelegate.swift in Sources */,
-				9521DD0A24CA704D00F57495 /* DataSource.swift in Sources */,
-				954FA20624CD941300C3B115 /* ModalViewController.swift in Sources */,
-				9521DCF324CA6E7F00F57495 /* SceneDelegate.swift in Sources */,
-				9521DD0F24CA706C00F57495 /* DetailViewController.swift in Sources */,
-				95E15CA024CBC92A008EB256 /* EditViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		954FA20B24CE786800C3B115 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				954FA21224CE786800C3B115 /* DatingAppMemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		959F7BE024CED78A005CE061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959F7BE124CED79E005CE061 /* MyNavigationViewController.swift in Sources */,
+				959F7BE224CED79E005CE061 /* ModalViewController.swift in Sources */,
+				959F7BE324CED79E005CE061 /* User.swift in Sources */,
+				959F7BE424CED79E005CE061 /* DataSource.swift in Sources */,
+				959F7BE524CED79E005CE061 /* MyColor.swift in Sources */,
+				959F7BE624CED79E005CE061 /* ViewController.swift in Sources */,
+				959F7BE724CED79E005CE061 /* AddViewController.swift in Sources */,
+				959F7BE824CED79E005CE061 /* DetailViewController.swift in Sources */,
+				959F7BE924CED79E005CE061 /* EditViewController.swift in Sources */,
+				959F7BEA24CED79F005CE061 /* PresentationController.swift in Sources */,
+				959F7BEB24CED79F005CE061 /* AppDelegate.swift in Sources */,
+				959F7BEC24CED79F005CE061 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +558,7 @@
 		};
 		9521DD0224CA6E8300F57495 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9091D41FCDF544E0AA4291DA /* Pods-DatingAppMemo.debug.xcconfig */;
+			baseConfigurationReference = DBA5D890B885072C3179D319 /* Pods-DatingAppMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,7 +578,7 @@
 		};
 		9521DD0324CA6E8300F57495 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FA919C3C5B20F1ECD4C99D8 /* Pods-DatingAppMemo.release.xcconfig */;
+			baseConfigurationReference = 4824DA5F55AD7D7133E3DCF7 /* Pods-DatingAppMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +599,7 @@
 		954FA21724CE786800C3B115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RFPAQ2NAA;
@@ -588,6 +620,7 @@
 		954FA21824CE786800C3B115 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RFPAQ2NAA;
